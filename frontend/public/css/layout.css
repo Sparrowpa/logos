@@ -1,0 +1,1046 @@
+/*
+=====================================================================
+*   Ceevee v1.0 Layout Stylesheet
+*   url: styleshout.com
+*   03-18-2014
+=====================================================================
+
+   TOC:
+   a. General Styles
+   b. Header Styles
+   c. About Section
+   d. Resume Section
+   e. Portfolio Section
+   f. Call To Action Section
+   g. Testimonials Section
+   h. Contact Section
+   i. Footer
+
+===================================================================== */
+
+/* ------------------------------------------------------------------ */
+/* a. General Styles
+/* ------------------------------------------------------------------ */
+
+body { background: #0f0f0f; }
+
+/* ------------------------------------------------------------------ */
+/* b. Header Styles
+/* ------------------------------------------------------------------ */
+header {
+   position: relative;
+   height: 800px;
+   min-height: 500px;
+   width: 100%;
+   
+   text-align: center;
+   overflow: hidden;
+}
+
+/* vertically center banner section */
+header:before {
+   content: '';
+   display: inline-block;
+   vertical-align: middle;
+   height: 100%;
+}
+header .banner {
+   display: inline-block;
+   vertical-align: middle;
+   margin: 0 auto;
+   width: 85%;
+   padding-bottom: 30px;
+   text-align: center;
+}
+
+header .banner-text { width: 100%; }
+header .banner-text h1 {
+   font: 90px/1.1em 'Roboto-Medium', sans-serif;
+   color: #C03020;
+   letter-spacing: -2px;
+   margin: 0 auto 18px auto;
+}
+header .banner-text h3 {
+   font: 18px/1.9em 'Roboto-Black', serif;
+   color: #C0C0C0;
+   margin: 0 auto;
+   width: 70%;
+}
+header .banner-text h3 span,
+header .banner-text h3 a {
+   color: #C0C0C0;
+}
+header .banner-text hr {
+   width: 60%;
+   margin: 18px auto 24px auto;
+   border-color: #2F2D2E;
+   border-color: rgba(150, 150, 150, .1);
+}
+
+/* header social links */
+header .social {
+   margin: 24px 0;
+   padding: 0;
+   font-size: 30px;
+}
+header .social li {
+   display: inline-block;
+   margin: 0 15px;
+   padding: 0;
+}
+header .social li a { color: #fff; }
+header .social li a:hover { color: #0762f9; }
+
+/* scrolldown link */
+header .scrolldown a {
+   position: absolute;
+   bottom: 30px;
+   left: 50%;
+   margin-left: -29px;
+   color: #fff;
+   display: block;
+   height: 42px;
+   width: 42px;
+   font-size: 42px;
+   line-height: 42px;
+   color: #fff;
+   border-radius: 100%;
+
+   -webkit-transition: all .3s ease-in-out;
+   -moz-transition: all .3s ease-in-out;
+   -o-transition: all .3s ease-in-out;
+   transition: all .3s ease-in-out;
+}
+header .scrolldown a:hover { color: #0762f9; }
+
+/* primary navigation
+--------------------------------------------------------------------- */
+#nav-wrap ul, #nav-wrap li, #nav-wrap a {
+	 margin: 0;
+	 padding: 0;
+	 border: none;
+	 outline: none;
+}
+
+/* nav-wrap */
+#nav-wrap {
+   font: 12px 'Roboto-Black', sans-serif;
+   width: 100%;
+   text-transform: uppercase;
+   letter-spacing: 2.5px;
+   margin: 0 auto;
+   z-index: 100;
+   position: fixed;
+   left: 0;
+   top: 0;
+}
+.opaque { background-color: #333; }
+
+/* hide toggle button */
+#nav-wrap > a.mobile-btn { display: none; }
+
+ul#nav {
+   min-height: 48px;
+   width: auto;
+
+   /* center align the menu */
+   text-align: center;
+}
+ul#nav li {
+   position: relative;
+   list-style: none;
+   height: 48px;
+   display: inline-block;
+}
+
+/* Links */
+ul#nav li a {
+
+/* 8px padding top + 8px padding bottom + 32px line-height = 48px */
+
+   display: inline-block;
+   padding: 8px 13px;
+   line-height: 32px;
+	text-decoration: none;
+   text-align: left;
+   color: #fff;
+
+	-webkit-transition: color .2s ease-in-out;
+	-moz-transition: color .2s ease-in-out;
+	-o-transition: color .2s ease-in-out;
+	-ms-transition: color .2s ease-in-out;
+	transition: color .2s ease-in-out;
+}
+
+ul#nav li a:active { background-color: transparent !important; }
+ul#nav li.current a { color: #fe6928; }
+
+
+/* ------------------------------------------------------------------ */
+/* c. About Section
+/* ------------------------------------------------------------------ */
+
+#about {
+   background: #000524;
+   padding-top: 96px;
+   padding-bottom: 66px;
+   overflow: hidden;
+}
+
+#about a, #about a:visited  { color: #fff; }
+#about a:hover, #about a:focus { color: #0762f9; }
+
+#about h2 {
+   font: 30px/30px 'Roboto-Medium', sans-serif;
+   color: #C03020;
+   margin-bottom: 12px;
+}
+#about p {
+   line-height: 30px;
+   color: #ccc;
+}
+#about .photo-gallery {
+  position: relative;
+  width: 120px; /* Ширина контейнера для миниатюр */
+  height: auto; /* Убираем фиксированную высоту */
+}
+#about .photo-gallery img {
+  margin-bottom: 80px; /* Устанавливает расстояние между изображениями */
+  width: 100%; /* Ширина изображений 100% от контейнера */
+  height: 120px; /* Высота автоматически подстраивается */
+  object-fit: cover; /* Сохраняет пропорции изображений и обрезает лишние части */
+  border-radius: 50%; /* Округление изображений для сохранения формы круга */
+  cursor: pointer; /* Указывает на кликабельность */
+  transition: transform 0.3s; /* Добавим плавный эффект при наведении */
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+#about .contact-details { width: 41.66667%; }
+#about .download {
+   width: 58.33333%;
+   padding-top: 6px;
+}
+#about .main-col { padding-right: 5%; }
+#about .download .button {
+   margin-top: 6px;
+   background: #444;
+}
+#about .download .button:hover {
+   background: #fff;
+   color: #2B2B2B;
+}
+#about .download .button i {
+   margin-right: 15px;
+   font-size: 20px;
+}
+@media (max-width: 768px) {
+  .photo-gallery {
+    display: none;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Стили для раздела "Как мы помогаем" */
+/* ------------------------------------------------------------------ */
+
+#howwehelp {
+   min-height: 100vh;
+   background: #00112b; /* Цвет фона раздела */
+   padding: 60px 0px; /* Отступы: верх и низ */
+   overflow: hidden; /* Обрезает содержимое, выходящее за пределы */
+   text-align: center; /* Центрирует текст внутри раздела */
+}
+#howwehelp .row {
+   display: flex; /* Использует Flexbox для расположения элементов */
+   justify-content: center; /* Центрирует содержимое по горизонтали */
+   align-items: center; /* Центрирует содержимое по вертикали */
+   height: 100%; /* Высота 100% для центрирования */
+}
+/* Параграфы в разделе "Как мы помогаем" */
+#howwehelp p {
+   line-height: 30px; /* Межстрочный интервал */
+   color: #C03020; /* Цвет текста */
+   text-align: center; /* Центрирование текста */
+   margin: 0 auto; /* Автоматические отступы по бокам */
+   width: fit-content; /* Ширина по содержимому */
+   font-size: 25px; /* Размер текста */
+}
+
+/* Контейнер для списка услуг */
+#howwehelp .services {
+   display: flex; /* Использует flexbox для расположения элементов */
+   flex-wrap: wrap; /* Позволяет элементам обтекать при нехватке места */
+   justify-content: center; /* Центрирует элементы по горизонтали */
+   gap: 20px; /* Пробел между элементами */
+   margin-top: 10px; /* Отступ сверху */
+}
+
+/* Стили для отдельного элемента услуги */
+#howwehelp .service-item {
+   flex: 0 1 calc(25% - 20px); /* Устанавливает ширину элемента (25% минус отступ) */
+   background: #0f0f0f; /* Цвет фона элемента услуги */
+   border: 1px solid #333; /* Цвет рамки */
+   border-radius: 5px; /* Скругление углов */
+   padding: 10px; /* Отступы внутри элемента */
+   color: #fff; /* Цвет текста */
+   text-align: center; /* Центрирует текст внутри элемента */
+   transition: transform 0.3s; /* Плавный переход при изменении положения */
+}
+
+/* Стили для больших экранов (900px и более) */
+@media (min-width: 900px) {
+   #howwehelp .service-item {
+       flex: 0 1 calc(25% - 20px); /* Устанавливает ширину элемента (25% минус отступ) */
+   }
+}
+
+/* Стили для средних экранов (от 600px до 899px) */
+@media (min-width: 600px) and (max-width: 899px) {
+   #howwehelp .service-item {
+       flex: 0 1 calc(50% - 20px); /* Устанавливает ширину элемента (50% минус отступ) */
+   }
+}
+
+/* Стили для маленьких экранов (менее 600px) */
+@media (max-width: 599px) {
+   #howwehelp .service-item {
+       flex: 0 1 100%; /* Устанавливает ширину элемента (100%) */
+   }
+}
+
+/* Эффект при наведении на элемент услуги */
+#howwehelp .service-item:hover {
+   transform: translateY(-5px); /* Сдвигает элемент вверх при наведении */
+}
+
+/* Заголовок в элементе услуги */
+#howwehelp .service-item h3 {
+   font-size: 20px; /* Размер шрифта */
+   color: #C03020; /* Цвет текста */
+   margin: 0; /* Убирает отступы */
+   padding-bottom: 8px; /* Отступ снизу */
+}
+
+/* Параграфы в элементе услуги */
+#howwehelp .service-item p {
+   font-size: 16px; /* Размер шрифта */
+   color: #ccc; /* Цвет текста */
+   margin: 0; /* Убирает отступы */
+}
+/* ГАЛЕРЕЯ */
+.gallery-title {
+  font: 30px 'Roboto-Medium', sans-serif; /* Шрифт и размер заголовка */
+  color: #C03020; /* Цвет текста */
+  margin: 20px 0; /* Отступы сверху и снизу */
+  text-align: center; /* Центрирование текста */
+  opacity: 0; /* Начальная прозрачность для эффекта появления */
+  animation: fadeIn 0.8s forwards; /* Анимация появления */
+}
+
+.gallery-section {
+    width: 100vw;
+    height: 100vh;
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #ffffff;
+}
+
+.main-image-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-image-container:hover .nav-button {
+    opacity: 1; /* Делает кнопки видимыми при наведении */
+}
+
+.main-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+.nav-button {
+    font-size: 24px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    opacity: 0; /* Скрывает кнопки по умолчанию */
+    transition: opacity 0.3s ease; /* Плавное появление */
+}
+
+.nav-button.left {
+    left: 0.01%;
+}
+
+.nav-button.right {
+    right: 0.01%;
+}
+
+.nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.indicator-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.indicator {
+    width: 30px;
+    height: 4px;
+    margin: 0 5px;
+    background-color: #666;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.indicator.active {
+    background-color: #007bff;
+}
+/* ------------------------------------------------------------------ */
+/* f. ОТЗЫВЫ */
+/* ------------------------------------------------------------------ */
+
+/* Общие стили для отзывов */
+#reviews {
+  opacity: 1; /* Заменено display на opacity */
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+#reviews h2 {
+  color: #C03020;
+}
+
+.reviews-container {
+  margin-bottom: 20px;
+}
+
+.review-item {
+  position: relative;
+  background-color: #f9f9f9;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Скрыть лишний контент */
+}
+
+/* Установите минимальную высоту для имени и даты */
+.review-item h3 {
+  font-size: 1.2em;
+  margin: 0 0 5px;
+  min-height: 30px; /* Задаем минимальную высоту */
+}
+
+.review-date {
+  font-size: 0.9em;
+  color: #777;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  white-space: nowrap; /* Не переносить текст */
+  overflow: hidden;    /* Скрыть лишний текст */
+  text-overflow: ellipsis; /* Добавить многоточие */
+}
+
+.review-text {
+  margin: 5px 0;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 7.5em;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+/* Добавим адаптивность для мобильной версии */
+@media (max-width: 600px) {
+  .review-item {
+    padding: 10px; /* Уменьшаем отступы на мобильной версии */
+  }
+
+  .review-date {
+    position: relative; /* Меняем позицию для мобильной версии */
+    top: auto;
+    right: auto;
+    white-space: normal; /* Позволяем переносить текст */
+  }
+}
+
+.review-text.expanded {
+  max-height: none;
+}
+
+.toggle-button {
+  background: none;
+  color: #007bff;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 0.9em;
+  margin-top: 5px;
+  transition: color 0.2s ease;
+}
+
+.toggle-button:hover {
+  color: #0056b3; /* Цвет текста при наведении */
+  background: none; /* Убедитесь, что фон остается прозрачным */
+}
+
+/* Убрать черную рамку при фокусе */
+.toggle-button:focus {
+  outline: none; /* Убрать рамку при фокусе */
+}
+
+form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+form button[type="submit"] {
+  background-color: #4CAF50; /* Цвет фона */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease; /* Плавный переход для фона */
+}
+
+form button[type="submit"]:hover {
+  background-color: #45a049; /* Изменение цвета фона при наведении */
+}
+
+form button[type="submit"]:focus,
+.toggle-button:focus {
+  outline: none; /* Убрать рамку при фокусе */
+}
+
+/* Стили для модального окна */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* ------------------------------------------------------------------ */
+/* f. Call To Action Section
+/* ------------------------------------------------------------------ */
+
+#call-to-action {
+   background: #212121;
+   padding-top: 66px;
+   padding-bottom: 48px;
+}
+#call-to-action h1 {
+   font: 18px/24px 'opensans-bold', sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 3px;
+   color: #fff;
+}
+#call-to-action h1 span { display: none; }
+#call-to-action .header-col h1:before {
+   font-family: 'FontAwesome';
+   content: "\f0ac";
+	padding-right: 10px;
+	font-size: 72px;
+   line-height: 72px;
+   text-align: left;
+   float: left;
+   color: #fff;
+}
+#call-to-action .action {
+   margin-top: 12px;
+}
+#call-to-action h2 {
+   font: 28px/36px 'opensans-bold', sans-serif;
+   color: #EBEEEE;
+   margin-bottom: 6px;
+}
+#call-to-action h2 a {
+   color: inherit;
+}
+#call-to-action p {
+   color: #636363;
+   font-size: 17px;
+}
+/*#
+call-to-action .button {
+	color:#fff;
+   background: #0D0D0D;
+}
+*/
+#call-to-action .button:hover,
+#call-to-action .button:active {
+   background: #FFFFFF;
+   color: #0D0D0D;
+}
+#call-to-action p span {
+	font-family: 'opensans-semibold', sans-serif;
+	color: #D8D8D8;
+}
+
+/* ------------------------------------------------------------------
+/* g. Testimonials
+/* ------------------------------------------------------------------ */
+
+#testimonials {
+   background: #1F1F1F url(../images/testimonials-bg.jpg) no-repeat center center;
+   background-size: cover !important;
+	-webkit-background-size: cover !important;
+   background-attachment: fixed;
+
+   position: relative;
+   min-height: 200px;
+   width: 100%;
+   overflow: hidden;
+}
+#testimonials .text-container {
+   padding-top: 96px;
+   padding-bottom: 66px;
+}
+#testimonials h1 {
+   font: 18px/24px 'opensans-bold', sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 3px;
+   color: #fff;
+}
+#testimonials h1 span { display: none; }
+#testimonials .header-col { padding-top: 9px; }
+#testimonials .header-col h1:before {
+   font-family: 'FontAwesome';
+   content: "\f10d";
+	padding-right: 10px;
+	font-size: 72px;
+   line-height: 72px;
+   text-align: left;
+   float: left;
+   color: #fff;
+}
+
+/*	Blockquotes */
+#testimonials blockquote {
+   margin: 0 0px 30px 0px;
+   padding-left: 0;
+   position: relative;
+   text-shadow: 0px 1px 3px rgba(0, 0, 0, 1);
+}
+#testimonials blockquote:before { content: none; }
+#testimonials blockquote p {
+   font-family: 'librebaskerville-italic', serif;
+   padding: 0;
+   font-size: 24px;
+   line-height: 48px;
+   color: #fff
+}
+#testimonials blockquote cite {
+   display: block;
+   font-size: 12px;
+   font-style: normal;
+   line-height: 18px;
+   color: #fff;
+}
+#testimonials blockquote cite:before { content: "\2014 \0020"; }
+#testimonials blockquote cite a,
+#testimonials blockquote cite a:visited { color: #8B9798; border: none }
+
+/* Flex Slider
+/* ------------------------------------------------------------------ */
+
+/* Reset */
+.flexslider a:active,
+.flexslider a:focus  { outline: none; }
+.slides,
+.flex-control-nav,
+.flex-direction-nav { margin: 0; padding: 0; list-style: none; }
+.slides li { margin: 0; padding: 0;}
+
+/* Necessary Styles */
+.flexslider {
+   position: relative;
+   zoom: 1;
+   margin: 0;
+   padding: 0;
+}
+.flexslider .slides { zoom: 1; }
+.flexslider .slides > li { position: relative; }
+
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides > li { display: none; -webkit-backface-visibility: hidden; }
+/* Suggested container for slide animation setups. Can replace this with your own */
+.flex-container { zoom: 1; position: relative; }
+
+/* Clearfix for .slides */
+.slides:before,
+.slides:after {
+   content: " ";
+   display: table;
+}
+.slides:after {
+   clear: both;
+}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child { display: block; }
+
+/* Slider Styles */
+.slides { zoom: 1; }
+.slides > li {
+   /*margin-right: 5px; */
+   overflow: hidden;
+}
+
+/* Control Nav */
+.flex-control-nav {
+    width: 100%;
+    position: absolute;
+    bottom: -20px;
+    text-align: left;
+}
+.flex-control-nav li {
+    margin: 0 6px;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+}
+.flex-control-paging li a {
+    width: 12px;
+    height: 12px;
+    display: block;
+    background: #ddd;
+    background: rgba(255, 255, 255, .3);
+    cursor: pointer;
+    text-indent: -9999px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+    box-shadow: inset 0 0 3px rgba(255, 255, 255, .3);
+}
+.flex-control-paging li a:hover {
+    background: #CCC;
+    background: rgba(255, 255, 255, .7);
+}
+.flex-control-paging li a.flex-active {
+    background: #fff;
+    background: rgba(255, 255, 255, .9);
+    cursor: default;
+}
+
+/* ------------------------------------------------------------------ */
+/* h. Contact Section
+/* ------------------------------------------------------------------ */
+
+#contact {
+   background: #191919;
+   padding-top: 96px;
+   padding-bottom: 102px;
+   color: #636363;
+}
+#contact .section-head { margin-bottom: 42px; }
+
+#contact a, #contact a:visited  { color: #0762f9; }
+#contact a:hover, #contact a:focus { color: #fff; }
+
+#contact h1 {
+   font: 18px/24px 'opensans-bold', sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 3px;
+   color: #EBEEEE;
+   margin-bottom: 6px;
+}
+#contact h1 span { display: none; }
+#contact h1:before {
+   font-family: 'FontAwesome';
+   content: "\f0e0";
+	padding-right: 10px;
+	font-size: 72px;
+   line-height: 72px;
+   text-align: left;
+   float: left;
+   color: #ebeeee;
+}
+
+#contact h4 {
+   font: 16px/24px 'opensans-bold', sans-serif;
+   color: #EBEEEE;
+   margin-bottom: 6px;
+}
+#contact p.lead {
+   font: 18px/36px 'opensans-light', sans-serif;
+   padding-right: 3%;
+}
+#contact .header-col { padding-top: 6px; }
+
+
+/* contact form */
+#contact form { margin-bottom: 30px; }
+#contact label {
+   font: 15px/24px 'opensans-bold', sans-serif;
+   margin: 12px 0;
+   color: #EBEEEE;
+	display: inline-block;
+	float: left;
+   width: 26%;
+}
+#contact input,
+#contact textarea,
+#contact select {
+   padding: 10px 20px;
+	color: #eee;
+	background: #373233;
+	margin-bottom: 42px;
+	border: 0;
+	outline: none;
+   font-size: 15px;
+   line-height: 24px;
+   width: 65%;
+}
+#contact input:focus,
+#contact textarea:focus,
+#contact select:focus {
+	color: #fff;
+	background-color: #0762f9;
+}
+#contact button.submit {
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	color:#fff;
+   background: #0D0D0D;
+	border: none;
+   cursor: pointer;
+   height: auto;
+   display: inline-block;
+	border-radius: 0px;
+   margin-left: 26%;
+}
+#contact button.submit:hover {
+	color: #0D0D0D;
+	background: #fff;
+}
+#contact span.required {
+	color: #0762f9;
+	font-size: 13px;
+}
+#message-warning, #message-success {
+   display: none;
+	background: #0F0F0F;
+	padding: 24px 24px;
+	margin-bottom: 36px;
+   width: 65%;
+   margin-left: 26%;
+}
+#message-warning { color: #D72828; }
+#message-success { color: #0762f9; }
+
+#message-warning i,
+#message-success i {
+   margin-right: 10px;
+}
+#image-loader {
+   display: none;
+   position: relative;
+   left: 18px;
+   top: 17px;
+}
+
+
+/* 2гис*/
+#gis {
+   margin-top: 12px;
+   padding: 0;
+}
+#gis li {
+   margin: 6px 0px 12px 0;
+   line-height: 30px;
+}
+#gis li span {
+   display: block;
+}
+#gis li b a {
+   font: 13px/36px 'opensans-regular', Sans-serif;
+   color: #474747 !important;
+   border: none;
+}
+
+
+/* ------------------------------------------------------------------ */
+/* i. Footer
+/* ------------------------------------------------------------------ */
+
+footer {
+   padding-top: 48px;
+   margin-bottom: 48px;
+   color: #303030;
+   font-size: 14px;
+   text-align: center;
+   position: relative;
+}
+
+footer a, footer a:visited { color: #525252; }
+footer a:hover, footer a:focus { color: #fff; }
+
+/* copyright */
+footer .copyright {
+    margin: 0;
+    padding: 0;
+ }
+footer .copyright li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    line-height: 24px;
+}
+.ie footer .copyright li {
+   display: inline;
+}
+footer .copyright li:before {
+    content: "\2022";
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #095153;
+}
+footer .copyright  li:first-child:before {
+    display: none;
+}
+
+/* social links */
+
+
+/* Go To Top Button */
+#go-top {
+	position: absolute;
+	top: -24px;
+   left: 50%;
+   margin-left: -30px;
+}
+#go-top a {
+	text-decoration: none;
+	border: 0 none;
+	display: block;
+	width: 60px;
+	height: 60px;
+	background-color: #525252;
+
+	-webkit-transition: all 0.2s ease-in-out;
+   -moz-transition: all 0.2s ease-in-out;
+   -o-transition: all 0.2s ease-in-out;
+   -ms-transition: all 0.2s ease-in-out;
+   transition: all 0.2s ease-in-out;
+
+   color: #fff;
+   font-size: 21px;
+   line-height: 60px;
+ 	border-radius: 100%;
+}
+#go-top a:hover { background-color: #0F9095; }
+
+
+.social .btn:first-child{
+   margin-right: 30px;
+}
+.social .btn{
+   padding-left: 30px;
+   padding-right: 30px; 
+}
+.social .btn i{
+   margin-right: 15px;
+}
+.project-btn{
+   background-color: #1abc9c !important;
+}
+.github-btn{
+   background-color: #34495e !important;
+}
